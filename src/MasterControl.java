@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class MasterControl {
     public static void main(String[] args) {
+        Input input = new Input();
 
-
-        Input.promptUser();
+        input.promptUser();
 
 
 

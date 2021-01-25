@@ -1,23 +1,24 @@
-import com.sun.tools.javac.util.ArrayUtils;
-
-import javax.sound.sampled.Line;
 import java.util.*;
 
-import static java.util.Collections.swap;
 public class CircularShifter {
+    private static List<String> tmpLine;
+    private static ArrayList<List<String>> testArray = new ArrayList<List<String>>();
+
+    private static LineStorage line = new LineStorage();
     private static ArrayList<List<String>> fullList = new ArrayList<List<String>>();
     public ArrayList<List<String>>  getList() { return fullList; }
-    public static void shiftAtLine (List<String> list){
-       LineStorage line = new LineStorage();
+    static void shiftAtLine(List<String> list){
+
 
         for(int i = 0; i < list.size();i++) {
             list.add(list.remove(0));
             System.out.println(list);
-            line.saveLine(list);
-            fullList.add(list);
-
+            tmpLine = list;
+            fullList.add(tmpLine);
+//            testArray.set(i, tmpLine);
+//            System.out.println(fullList);
         }
-
+//        System.out.println(testArray);
 
 
     }

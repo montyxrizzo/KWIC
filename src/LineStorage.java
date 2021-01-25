@@ -11,7 +11,7 @@ public class LineStorage {
 
 
 
-    public static List<String> getWords(String line){
+    public  List<String> getWords(String line){
         int count = line.length();
         List<String> list = new ArrayList<String>();
         String [] words = line.split(" ", count );
@@ -25,14 +25,12 @@ public class LineStorage {
 
 
 
-    public static List<String> getRecordFromLine(String line) {
+    public  List<String> getRecordFromLine(String line) {
         List<String> values = new ArrayList<String>();
         try (Scanner rowScanner = new Scanner(line)) {
-//            System.out.println(line);
             rowScanner.useDelimiter(",");
             while (rowScanner.hasNext()) {
                 for(int i=0;i<values.size();i++){
-//                    System.out.println(values.get(i));
                 }
                 values.add(rowScanner.next());
 

@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Output {
-    private static CircularShifter circle;
+    private CircularShifter circle;
 
 
 
-    public static void promptUserOutput() {
+    public void promptUserOutput() {
 
         Scanner in = new Scanner(System.in);
 
@@ -64,7 +64,7 @@ public class Output {
 
 
     }
-    public static void writeToConsole(){
+    public  void writeToConsole(){
 
         circle = new CircularShifter();
         ArrayList<List<String>> list = circle.getList();

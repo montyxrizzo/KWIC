@@ -13,11 +13,11 @@ import java.util.Scanner;
 public class Input {
 
 
-    public static void promptUser() {
+    public  void promptUser() {
 
         Scanner in = new Scanner(System.in);
-
-        System.out.println("To perform a circular shift from your CSV file, press (1). For console input, press (2)");
+        Input reader = new Input();
+        System.out.println("To perform a circular shift from your .txt file, press (1). For console input, press (2)");
 
         int userInputChoice = -1;
 
@@ -37,11 +37,11 @@ public class Input {
 
                 if (userInputChoice == 1) {
 
-                    Input.readFile();
+                    reader.readFile();
 
                 } else {
 
-                    Input.readConsoleInput();
+                    reader.readConsoleInput();
                 }
             }
         } catch (InputMismatchException a) {
@@ -56,15 +56,18 @@ public class Input {
         }
     }
 
-        public static void readFile() {
+        public  void readFile() {
+
+            CircularShifter circle = new CircularShifter();
 
             Scanner in = new Scanner(System.in);
+            LineStorage lineStorage = new LineStorage();
 
             BufferedReader reader;
             try{
             try {
 
-                System.out.println("Please enter the absolute filepath to a CSV file containing the data you would like to shift.");
+                System.out.println("Please enter the absolute filepath to a TXT file containing the data you would like to shift.");
 
                 String filePath = in.nextLine();
 
@@ -72,19 +75,16 @@ public class Input {
                         filePath));
 
                 String line = reader.readLine();
-                LineStorage.getRecordFromLine(line);
-                List lineArray = LineStorage.getRecordFromLine(line);
-//                int count = 1;
-                List list =  LineStorage.getWords(line);
-                CircularShifter.shiftAtLine(list);
+                lineStorage.getRecordFromLine(line);
+                List lineArray = lineStorage.getRecordFromLine(line);
+                List list =  lineStorage.getWords(line);
+                circle.shiftAtLine(list);
                 while (line != null) {
-//                    count++;
-//                    System.out.println(line);
-                      // read next line
+
                     line = reader.readLine();
-                    list =  LineStorage.getWords(line);
-                    CircularShifter.shiftAtLine(list);
-                    lineArray = LineStorage.getRecordFromLine(line);
+                    list =  lineStorage.getWords(line);
+                    circle.shiftAtLine(list);
+                    lineArray = lineStorage.getRecordFromLine(line);
 
                      }
                      reader.close();
@@ -95,7 +95,8 @@ public class Input {
             }
             catch(NullPointerException e) {
 //                System.out.println("NullPointerException thrown!");
-                Output.promptUserOutput();
+                Output out = new Output();
+                out.promptUserOutput();
 
             }
         }
