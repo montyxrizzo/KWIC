@@ -6,10 +6,21 @@ import java.util.*;
 
 public class LineStorage {
 
-    private   List<List<String>> listTrans;
-    public void setList(List list) { list = listTrans; }
+    private  List<List<String>> transList = new ArrayList<>();
 
+    private  List<List<String>> transList = new ArrayList<>();
+    // Setter
 
+    public void setList(List list) { this.listTrans = list; }
+
+//    public void setList(ArrayList<String> list)
+    {
+//        this.listTrans.add(list);
+    }
+    // Getter
+    public List getList() {
+        return listTrans;
+    }
 
     public static List<String> getWords(String line){
         int count = line.length();
@@ -41,11 +52,11 @@ public class LineStorage {
 //        System.out.println(values);
         return values;
     }
-//private numbers number;
     public  List saveLine(List line) {
-        List<List<String>> list = new ArrayList<>();
+
         list.add(line);
-        this.listTrans = list;
+        transList.add(line);
+        this.setList(transList);
 
 
 //

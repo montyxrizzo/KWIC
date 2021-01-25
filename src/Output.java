@@ -1,5 +1,4 @@
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Output {
@@ -30,13 +29,13 @@ public class Output {
 
                 if (userInputChoice == 1) {
 
+                    //File output
 
                     Output.generateFile();
 
                 } else {
-//File output
+//                  output  console
                     Output.writeToConsole();
-
 
 
                 }
@@ -54,18 +53,22 @@ public class Output {
                 break;
         }
     }
-    private static void generateFile(){
 
-//           list = new LineStorage();
-//           List<List<String>>  list = list.getList();
-            //hurray !
+    private static void generateFile() {
 
 
-    }
-    private static void writeToConsole(){
+        LineStorage outputList = new LineStorage();
+        System.out.println(outputList.getList());
 
 
     }
+
+    private static void writeToConsole() {
+
+        LineStorage outputList = new LineStorage();
+        System.out.println(outputList.getList());
+    }
+
     public LineStorage getList() {
         return list;
     }

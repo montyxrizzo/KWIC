@@ -7,9 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 
 
-
-
-
 public class Input {
 
 
@@ -56,12 +53,12 @@ public class Input {
         }
     }
 
-        public static void readFile() {
+    public static void readFile() {
 
-            Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-            BufferedReader reader;
-            try{
+        BufferedReader reader;
+        try {
             try {
 
                 System.out.println("Please enter the absolute filepath to a CSV file containing the data you would like to shift.");
@@ -75,40 +72,35 @@ public class Input {
                 LineStorage.getRecordFromLine(line);
                 List lineArray = LineStorage.getRecordFromLine(line);
 //                int count = 1;
-                List list =  LineStorage.getWords(line);
+                List list = LineStorage.getWords(line);
                 CircularShifter.shiftAtLine(list);
                 while (line != null) {
 //                    count++;
 //                    System.out.println(line);
-                      // read next line
+                    // read next line
                     line = reader.readLine();
-                    list =  LineStorage.getWords(line);
+                    list = LineStorage.getWords(line);
                     CircularShifter.shiftAtLine(list);
                     lineArray = LineStorage.getRecordFromLine(line);
 
-                     }
-                     reader.close();
-                } catch (IOException e) {
+                }
+                reader.close();
+            } catch (IOException e) {
                 e.printStackTrace();
 
             }
-            }
-            catch(NullPointerException e) {
-//                System.out.println("NullPointerException thrown!");
-                Output.promptUserOutput();
+        } catch (NullPointerException e) {
+            Output.promptUserOutput();
 
-            }
         }
+    }
 
 
-    public static void readConsoleInput(){
+    public static void readConsoleInput() {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 //        String text = in.readLine();
     }
 
 
-//    public  static String addExclamationPoint(String s) {
-//        return s + "!";
-//    }
 }
 
