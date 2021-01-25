@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Output {
-    private LineStorage list;
+    private static CircularShifter circle;
+
 
 
     public static void promptUserOutput() {
@@ -35,7 +37,7 @@ public class Output {
 
                 } else {
 //File output
-                    Output.writeToConsole();
+                    writeToConsole();
 
 
 
@@ -62,12 +64,12 @@ public class Output {
 
 
     }
-    private static void writeToConsole(){
+    public static void writeToConsole(){
 
+        circle = new CircularShifter();
+        ArrayList<List<String>> list = circle.getList();
+        System.out.println(list);
+    }
 
-    }
-    public LineStorage getList() {
-        return list;
-    }
 
 }
