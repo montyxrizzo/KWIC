@@ -67,7 +67,7 @@ public class Output {
     public  void writeToConsole(){
 
         circle = new CircularShifter();
-        ArrayList<List<String>> list = circle.getList();
+        ArrayList<String> list = circle.getList();
         System.out.println(list);
     }
 

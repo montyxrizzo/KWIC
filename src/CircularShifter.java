@@ -2,19 +2,32 @@ import java.util.*;
 
 public class CircularShifter {
     private static List<String> tmpLine;
-    private static ArrayList<List<String>> testArray = new ArrayList<List<String>>();
-
     private static LineStorage line = new LineStorage();
-    private static ArrayList<List<String>> fullList = new ArrayList<List<String>>();
-    public ArrayList<List<String>>  getList() { return fullList; }
+    private static ArrayList<String> fullList =  new ArrayList<String>();
+
+    public ArrayList<String>  getList() { return fullList; }
+
     static void shiftAtLine(List<String> list){
 
 
         for(int i = 0; i < list.size();i++) {
             list.add(list.remove(0));
-            System.out.println(list);
+//            System.out.println(list);
             tmpLine = list;
-            fullList.add(tmpLine);
+//            Cast to string
+//            Turn list string to new string
+            StringBuffer sb = new StringBuffer();
+
+            for (String s : tmpLine) {
+                sb.append(s);
+                sb.append(" ");
+            }
+
+            String str = sb.toString();
+            str = str.replace(",", "");
+//            System.out.println(str);
+            fullList.add(str);
+            fullList.add("\n");
 //            testArray.set(i, tmpLine);
 //            System.out.println(fullList);
         }
