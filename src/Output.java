@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -5,7 +6,6 @@ import java.util.Scanner;
 
 public class Output {
     private CircularShifter circle;
-
 
 
     public void promptUserOutput() {
@@ -33,12 +33,11 @@ public class Output {
                 if (userInputChoice == 1) {
 
 
-                    Output.generateFile();
+                    generateFile();
 
                 } else {
 //File output
                     writeToConsole();
-
 
 
                 }
@@ -47,6 +46,8 @@ public class Output {
 
         } catch (InputMismatchException a) {
             System.out.print("Problem");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
 
@@ -56,19 +57,46 @@ public class Output {
                 break;
         }
     }
-    private static void generateFile(){
 
-//           list = new LineStorage();
-//           List<List<String>>  list = list.getList();
-            //hurray !
+    private void generateFile() throws FileNotFoundException {
+        circle = new CircularShifter();
+        ArrayList<String> list = circle.getList();
+        System.out.println("\n");
+        String listString = "";
+
+        for (String s : list) {
+            listString += s + "\t";
+        }
+//Write txt file
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter("KWIC_Result_File__HW1_Montreaux_Rodgers.txt"));
+            writer.write(listString);
+
+        } catch (IOException e) {
+        } finally {
+            try {
+                if (writer != null)
+                    writer.close();
+            } catch (IOException e) {
+            }
+        }
+        System.out.println("Your file has been written to  the SRC directory of this project.");
 
 
     }
-    public  void writeToConsole(){
+
+    public void writeToConsole() {
 
         circle = new CircularShifter();
         ArrayList<String> list = circle.getList();
-        System.out.println(list);
+        String listString = "";
+
+        for (String s : list) {
+            listString += s + "\t";
+        }
+        System.out.println("\n");
+        System.out.println(listString);
     }
 
 
