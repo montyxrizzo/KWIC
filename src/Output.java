@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Output {
@@ -61,12 +61,12 @@ public class Output {
     private void generateFile() throws FileNotFoundException {
         circle = new CircularShifter();
         ArrayList<String> list = circle.getList();
-        System.out.println("\n");
-        String listString = "";
+//        System.out.println("\n");
+        String listString = Alphabetizer.sortList(list);
 
-        for (String s : list) {
-            listString += s + "\t";
-        }
+//        for (String s : list) {
+//            listString += s + "\t";
+//        }
 //Write txt file
         BufferedWriter writer = null;
         try {
@@ -90,12 +90,13 @@ public class Output {
 
         circle = new CircularShifter();
         ArrayList<String> list = circle.getList();
-        String listString = "";
 
-        for (String s : list) {
-            listString += s + "\t";
-        }
-        System.out.println("\n");
+        String listString = Alphabetizer.sortList(list);
+//
+//        for (String s : list) {
+//            listString += s + "\t";
+//        }
+//        System.out.println("\n");
         System.out.println(listString);
     }
 
