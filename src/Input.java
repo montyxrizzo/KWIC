@@ -2,18 +2,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 
-
-
-
 public class Input {
 
 
-    public  void promptUser() {
+    public void promptUser() {
 
         Scanner in = new Scanner(System.in);
         Input reader = new Input();
@@ -56,18 +54,18 @@ public class Input {
         }
     }
 
-        public  void readFile() {
+    public void readFile() {
 
-            CircularShifter circle = new CircularShifter();
+        CircularShifter circle = new CircularShifter();
 
-            Scanner in = new Scanner(System.in);
-            LineStorage lineStorage = new LineStorage();
+        Scanner in = new Scanner(System.in);
+        LineStorage lineStorage = new LineStorage();
 
-            BufferedReader reader;
-            try{
+        BufferedReader reader;
+        try {
             try {
 
-                System.out.println("Please enter the absolute filepath to a TXT file containing the data you would like to shift.");
+                System.out.println("Please enter the absolute filepath to a .txt file containing the data you would like to shift.");
 
                 String filePath = in.nextLine();
 
@@ -77,39 +75,73 @@ public class Input {
                 String line = reader.readLine();
                 lineStorage.getRecordFromLine(line);
                 List lineArray = lineStorage.getRecordFromLine(line);
-                List list =  lineStorage.getWords(line);
+                List list = lineStorage.getWords(line);
                 circle.shiftAtLine(list);
                 while (line != null) {
 
                     line = reader.readLine();
-                    list =  lineStorage.getWords(line);
+                    list = lineStorage.getWords(line);
                     circle.shiftAtLine(list);
                     lineArray = lineStorage.getRecordFromLine(line);
 
-                     }
-                     reader.close();
-                } catch (IOException e) {
+                }
+                reader.close();
+            } catch (IOException e) {
                 e.printStackTrace();
 
             }
-            }
-            catch(NullPointerException e) {
+        } catch (NullPointerException e) {
 //                System.out.println("NullPointerException thrown!");
-                Output out = new Output();
-                out.promptUserOutput();
+            Output out = new Output();
+            out.promptUserOutput();
 
-            }
         }
-
-
-    public static void readConsoleInput(){
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-//        String text = in.readLine();
     }
 
 
-//    public  static String addExclamationPoint(String s) {
-//        return s + "!";
-//    }
+    public static void readConsoleInput() {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        CircularShifter circle = new CircularShifter();
+        LineStorage lineStorage = new LineStorage();
+
+        BufferedReader reader;
+        try {
+            String line;
+            try {
+
+                System.out.println("Please enter the sentences you would like to Circularly shift, separated by comma.");
+                while ((line = in.readLine()) != null) {
+                    String[] tokens = line.split("\\s");
+                    lineStorage.getRecordFromLine(line);
+                    List lineArray = lineStorage.getRecordFromLine(line);
+
+
+                    StringBuffer sb = new StringBuffer();
+
+                    for (Object s : lineArray) {
+                        sb.append(s);
+                        sb.append(" ");
+                    }
+                    List list = lineStorage.getWords(line);
+                    circle.shiftAtLine(list);
+                    Output out = new Output();
+                    out.promptUserOutput();
+
+//
+                }
+
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+        } catch (NullPointerException e) {
+//                System.out.println("NullPointerException thrown!");
+            Output out = new Output();
+            out.promptUserOutput();
+
+        }
+    }
+
 }
 
