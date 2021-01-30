@@ -1,18 +1,13 @@
 
+import java.io.IOException;
+
 public class MasterControl {
-    public static void main(String[] args) {
-        Input input = new Input();
+    public static void main(String[] args) throws IOException {
+//        Input input = new Input();
 
-        input.promptUser();
-
-
-
-
+        PropertyLoader properties = new PropertyLoader();
+        properties.getPropValues();
     }
-
-
-
-
 
 
 

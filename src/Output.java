@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-
 import java.util.Scanner;
 
 public class Output {
@@ -64,9 +63,6 @@ public class Output {
 //        System.out.println("\n");
         String listString = Alphabetizer.sortList(list);
 
-//        for (String s : list) {
-//            listString += s + "\t";
-//        }
 //Write txt file
         BufferedWriter writer = null;
         try {
@@ -92,11 +88,7 @@ public class Output {
         ArrayList<String> list = circle.getList();
 
         String listString = Alphabetizer.sortList(list);
-//
-//        for (String s : list) {
-//            listString += s + "\t";
-//        }
-//        System.out.println("\n");
+
         System.out.println(listString);
     }
 
