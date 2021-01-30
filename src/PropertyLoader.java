@@ -41,6 +41,24 @@ public class PropertyLoader {
 
 
                 result = "Configurations:" + input + ", " + sort + ", " + circShift +","+ formatFooter + "," + output +", "+","+ lineCount;
+//               Strategy Pattern
+                Input inputChoice = new Input();
+                System.out.println(input);
+
+                if (input.equals("kwic.FileInput")){
+                    System.out.println("triggered");
+
+                    inputChoice.readFile();
+
+                } else if (input.equals("kwic.ConsoleInput")) {
+                    inputChoice.readConsoleInput();
+                } else {
+                    System.out.println("Not a valid input option!");
+                }
+
+
+
+
                 System.out.println(result);
             } catch (Exception e) {
                 System.out.println("Exception: " + e);

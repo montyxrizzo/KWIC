@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="423abe04-a618-4b82-a5a3-12da5c22be6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PropertyLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KWIC_Result_File__HW1_Montreaux_Rodgers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/KWIC_Result_File__HW1_Montreaux_Rodgers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/MasterControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/MasterControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/Output.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/Output.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MasterControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MasterControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PropertyLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyLoader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +25,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Input.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-111">
-                  <caret line="78" column="35" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="35" />
+                <state relative-caret-position="282">
+                  <caret line="60" selection-start-line="60" selection-end-line="60" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -57,8 +50,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/MasterControl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+                <state relative-caret-position="165">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -96,8 +92,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/PropertyLoader.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="64">
-                  <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+                <state relative-caret-position="379">
+                  <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -146,8 +142,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/config.properties">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+                <state relative-caret-position="45">
+                  <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -340,13 +336,13 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.64529914" visible="true" weight="0.45" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.84737486" weight="0.31734693" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64468867" weight="0.45" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8467643" visible="true" weight="0.31734693" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4957265" weight="0.32959184" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.35470086" side_tool="true" visible="true" weight="0.45" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.495116" weight="0.32959184" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.15323566" side_tool="true" visible="true" weight="0.31734693" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.498779" weight="0.32959184" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4871795" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -391,10 +387,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Alphabetizer.java</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/src/Input.java</url>
+          <line>60</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -486,17 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Alphabetizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#689#697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CircularShifter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -541,17 +526,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MasterControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Input.java">
+    <entry file="file://$PROJECT_DIR$/src/Alphabetizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="78" column="35" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="35" />
+        <state relative-caret-position="375">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#689#697#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -566,10 +555,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PropertyLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="379">
+          <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

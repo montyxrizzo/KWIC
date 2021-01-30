@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import java.util.List;
 
 public class MasterControl {
     public static void main(String[] args) throws IOException {
@@ -7,6 +8,8 @@ public class MasterControl {
 
         PropertyLoader properties = new PropertyLoader();
         properties.getPropValues();
+        String result = properties.result;
+
     }
 
 
