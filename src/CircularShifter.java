@@ -21,7 +21,6 @@ public class CircularShifter {
                 sb.append(s);
                 sb.append(" ");
             }
-
             String str = sb.toString();
             str = str.replace(",", "");
             fullList.add(str);

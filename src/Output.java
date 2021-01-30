@@ -57,7 +57,7 @@ public class Output {
         }
     }
 
-    private void generateFile() throws FileNotFoundException {
+    public void generateFile() throws FileNotFoundException {
         circle = new CircularShifter();
         ArrayList<String> list = circle.getList();
 //        System.out.println("\n");

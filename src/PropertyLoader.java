@@ -3,8 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
-import java.util.Properties;
+import java.util.*;
 
 public class PropertyLoader {
 
@@ -12,8 +11,11 @@ public class PropertyLoader {
 
         String result = "";
         InputStream inputStream;
+        private  List transList  = new ArrayList<String>();
+    ;
 
-        public String getPropValues() throws IOException {
+
+    public String getPropValues() throws IOException {
 
             try {
 
@@ -34,32 +36,77 @@ public class PropertyLoader {
                 // get the property value and print it out
                 String input = prop.getProperty("input");
                 String sort = prop.getProperty("sort");
-                String circShift= prop.getProperty("circShift");
+                String circShift = prop.getProperty("circShift");
                 String formatFooter= prop.getProperty("formatFooter");
                 String output = prop.getProperty("output");
                 String lineCount = prop.getProperty("lineCount");
 
 
                 result = "Configurations:" + input + ", " + sort + ", " + circShift +","+ formatFooter + "," + output +", "+","+ lineCount;
-//               Strategy Pattern
+//            ~~~~   Strategy Pattern ~~
                 Input inputChoice = new Input();
-                System.out.println(input);
-
+//                System.out.println(input);
+//            Input
                 if (input.equals("kwic.FileInput")){
-                    System.out.println("triggered");
 
-                    inputChoice.readFile();
+
+                    transList = inputChoice.readFile();
+                    System.out.println(transList);
 
                 } else if (input.equals("kwic.ConsoleInput")) {
-                    inputChoice.readConsoleInput();
+                    transList = inputChoice.readConsoleInput();
+
+
                 } else {
                     System.out.println("Not a valid input option!");
+
+                }
+//                CircShift
+                if (circShift.equals("kwic.NoStopWordShift")){
+
+
+
+
+                } else if (circShift.equals("kwic.StopWordShift") ){
+
+                } else {
+                    System.out.println("Invalid CircShift Option");
+                }
+// Sorting Options
+                if(sort.equals("kwic.CaseSensitive")){
+
+
+                } else {
+
                 }
 
 
 
 
-                System.out.println(result);
+
+
+//             ~~~~~   Output ~~~~~~
+                 Output out = new Output();
+//                    out.promptUserOutput();
+                if (output.equals("kwic.FileOutput")){
+
+
+                    out.generateFile();
+
+                } else if (output.equals("kwic.ConsoleOutput")) {
+                    out.writeToConsole();
+
+                } else {
+                    System.out.println("Not a valid output option!");
+
+                }
+
+
+
+
+
+
+                System.out.println("Config Options: " + result);
             } catch (Exception e) {
                 System.out.println("Exception: " + e);
             } finally {

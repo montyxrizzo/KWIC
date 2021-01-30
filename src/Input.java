@@ -2,12 +2,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 
 public class Input {
+    public   List fullList = new ArrayList<String>();
 
 
     public void promptUser() {
@@ -43,6 +45,8 @@ public class Input {
             }
         } catch (InputMismatchException a) {
             System.out.print("Problem");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
 
@@ -53,7 +57,7 @@ public class Input {
         }
     }
 
-    public void readFile() {
+    public List<String> readFile() throws Exception {
 
         CircularShifter circle = new CircularShifter();
 
@@ -76,29 +80,40 @@ public class Input {
                 List lineArray = lineStorage.getRecordFromLine(line);
                 List list = lineStorage.getWords(line);
                 circle.shiftAtLine(list);
+                fullList.add(line);
+
                 while (line != null) {
 
                     line = reader.readLine();
                     list = lineStorage.getWords(line);
+                    fullList.add(line);
                     circle.shiftAtLine(list);
                     lineArray = lineStorage.getRecordFromLine(line);
 
                 }
+//                fullList = list;
+                System.out.println(fullList);
                 reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
 
             }
         } catch (NullPointerException e) {
-//                System.out.println("NullPointerException thrown!");
-            Output out = new Output();
-            out.promptUserOutput();
+                System.out.println("NullPointerException thrown!");
+//            Output out = new Output();
+//            out.promptUserOutput();
+
+        }catch (Exception e) {
 
         }
+
+        return fullList;
+
+
     }
 
 
-    public static void readConsoleInput() {
+    public List<String> readConsoleInput() throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         CircularShifter circle = new CircularShifter();
         LineStorage lineStorage = new LineStorage();
@@ -113,7 +128,7 @@ public class Input {
                     String[] tokens = line.split("\\s");
                     lineStorage.getRecordFromLine(line);
                     List lineArray = lineStorage.getRecordFromLine(line);
-
+                    fullList.add(line);
 
                     StringBuffer sb = new StringBuffer();
 
@@ -122,9 +137,10 @@ public class Input {
                         sb.append(" ");
                     }
                     List list = lineStorage.getWords(line);
-                    circle.shiftAtLine(list);
-                    Output out = new Output();
-                    out.promptUserOutput();
+
+//                    circle.shiftAtLine(list);
+//                    Output out = new Output();
+//                    out.promptUserOutput();
 
 //
                 }
@@ -135,11 +151,16 @@ public class Input {
 
             }
         } catch (NullPointerException e) {
-//                System.out.println("NullPointerException thrown!");
-            Output out = new Output();
-            out.promptUserOutput();
+                System.out.println("NullPointerException thrown!");
+//            Output out = new Output();
+//            out.promptUserOutput();
+
+        }catch (Exception e) {
 
         }
+
+        return fullList;
+
     }
 
 }
