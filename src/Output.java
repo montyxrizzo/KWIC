@@ -59,21 +59,32 @@ public class Output {
 
     public void generateFile() throws FileNotFoundException {
         circle = new CircularShifter();
+        PropertyLoader props = new PropertyLoader();
         ArrayList<String> list = circle.getList();
-//        System.out.println("\n");
         String listString = Alphabetizer.sortList(list);
 
 //Write txt file
+        if (props.lineCountSetting.equals("Before")){
+            props.headerLine += "Line count: " + props.lineCounter +"\n" +"\n";
+        } else if (props.lineCountSetting.equals("After")){
+            props.headerLine += "\n Line count: " + props.lineCounter;
+        }
+
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter("KWIC_Result_File__HW1_Montreaux_Rodgers.txt"));
-            writer.write(listString);
+            writer.write(props.headerLine);
+            for (int i=0; i < list.size();i++)
+                writer.write(list.get(i) + System.getProperty( "line.separator" ));
+//                writer.write("\n"+ System.getProperty( "line.separator" ));
+
 
         } catch (IOException e) {
         } finally {
             try {
                 if (writer != null)
-                    writer.close();
+                    writer.write(props.footerLine);
+                writer.close();
             } catch (IOException e) {
             }
         }
@@ -88,8 +99,10 @@ public class Output {
         ArrayList<String> list = circle.getList();
 
         String listString = Alphabetizer.sortList(list);
+        for (int i=0; i < list.size();i++)
+            System.out.println(list.get(i));
 
-        System.out.println(listString);
+//        System.out.println(listString);
     }
 
 

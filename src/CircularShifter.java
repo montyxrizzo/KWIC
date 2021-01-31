@@ -27,7 +27,7 @@ public class CircularShifter {
                 String str = sb.toString();
 //            str = str.replace(",", "");
                 fullList.add(str);
-                fullList.add("\n");
+//                fullList.add("\n");
 
             }
         }
@@ -41,7 +41,7 @@ public class CircularShifter {
         try {
             stopwords = stopwordInput.readFile();
             stopwords = linestore.getWords(stopwords.get(0));
-            System.out.println(stopwords);
+            System.out.println("Stop Words: " + stopwords);
             // Array of prefixes
 
 
@@ -63,13 +63,13 @@ public class CircularShifter {
                 }
 
 
-                if (result)
-                    System.out.println("Given String "
-                            + "starts with one of the prefixes, removing row");
-
-                else
-                    System.out.println("Given String do not "
-                            + "starts with one of the prefixes.");
+//                if (result)
+//                    System.out.println("Given String "
+//                            + "starts with one of the prefixes, removing row");
+//
+//                else
+//                    System.out.println("Given String do not "
+//                            + "starts with one of the prefixes.");
             }
 
         } catch (Exception e) {

@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Collections;
 
 public class Alphabetizer {
-    public static String sortList(ArrayList<String> list){
+    public static String sortList(List<String> list){
         String[] myArray = new String[list.size()];
         myArray = list.toArray(myArray);
         int size = myArray.length;
@@ -19,11 +20,23 @@ public class Alphabetizer {
         }
 //        System.out.println(Arrays.toString(myArray));
         List<String> tmpList = new ArrayList<String>(Arrays.asList(myArray));
-        tmpList.remove("\n");
+//        tmpList.remove("\n");
+
 
         myArray = tmpList.toArray(new String[0]);
-        String newString = Arrays.toString(myArray).replace("\n,","");
+        Arrays.sort(myArray);
+        String newString = Arrays.toString(myArray);
+//                .replace("\n,","");
         return newString;
 
+    }
+
+    public static String caseInsensitiveSort(List<String> list){
+        String[] myArray = new String[list.size()];
+        Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
+        String newString = Arrays.toString(myArray);
+
+
+        return newString;
     }
 }

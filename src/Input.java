@@ -97,7 +97,7 @@ public class Input {
 
                 }
 //                fullList = list;
-                System.out.println(fullList);
+//                System.out.println(fullList);
                 reader.close();
                 } else if (currentList != null) {
                     System.out.println("Please enter the absolute filepath to a .txt file containing the STOPWORDS you would like to ommit.");
