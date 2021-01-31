@@ -1,7 +1,5 @@
 ~ KWIC Output Header  ~ 
 
-Line count: There are 20 lines in your output.
-
 gooder than god, What is 
 than god, What is gooder 
 god, What is gooder than 
@@ -25,3 +23,4 @@ die? and if you eat it you will
 
 
  ~ KWIC footer ~ 
+Line count: There are 20 lines in your output.

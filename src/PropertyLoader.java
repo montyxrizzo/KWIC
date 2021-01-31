@@ -10,7 +10,7 @@ public class PropertyLoader {
 
     String result = "";
     InputStream inputStream;
-    public  static String lineCounter = "";
+    public static String lineCounter = "";
     private List transList = new ArrayList<String>();
     public static String headerLine = "";
     public static String footerLine = "";
@@ -85,7 +85,6 @@ public class PropertyLoader {
             }
 
 
-
 //             ~~~~~   Output ~~~~~~
             int counter = 0;
             for (int i = 0; i < transList.size(); i++)
@@ -100,16 +99,15 @@ public class PropertyLoader {
             }
 
 
-
             if (output.equals("kwic.FileOutput")) {
 
-                if (formatFooter.equals("True")){
+                if (formatFooter.equals("True")) {
                     String header = "~ KWIC Output Header  ~ ";
                     String footer = " ~ KWIC footer ~ ";
 
                     System.getProperty("line.separator");
-                     headerLine = header + System.getProperty("line.separator") + "\n" ;
-                     footerLine = "\n"+System.getProperty("line.separator") +footer;
+                    headerLine = header + System.getProperty("line.separator") + "\n";
+                    footerLine = "\n" + System.getProperty("line.separator") + footer;
                 }
 
                 out.generateFile();

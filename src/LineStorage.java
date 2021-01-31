@@ -7,7 +7,7 @@ import java.util.*;
 public class LineStorage {
 
     private   List<List<String>> listTrans;
-    public void setList(List list) { list = listTrans; }
+
 
 
 
@@ -36,18 +36,8 @@ public class LineStorage {
 
             }
         }
-//        System.out.println(values);
+
         return values;
-    }
-//private numbers number;
-    public  List saveLine(List line) {
-        List<List<String>> list = new ArrayList<>();
-        list.add(line);
-        this.listTrans = list;
-
-
-//
-        return list;
     }
 
 }
