@@ -1,0 +1,27 @@
+~ KWIC Output Header  ~ 
+
+Line count: There are 20 lines in your output.
+
+gooder than god, What is 
+than god, What is gooder 
+god, What is gooder than 
+What is gooder than god, 
+evil than the devil, more 
+than the devil, more evil 
+devil, more evil than the 
+more evil than the devil, 
+rich need it, the 
+need it, the rich 
+the rich need it, 
+poor have it, the 
+have it, the poor 
+the poor have it, 
+if you eat it you will die? and 
+you eat it you will die? and if 
+eat it you will die? and if you 
+you will die? and if you eat it 
+will die? and if you eat it you 
+die? and if you eat it you will 
+
+
+ ~ KWIC footer ~ 

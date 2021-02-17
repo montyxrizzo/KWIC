@@ -40,10 +40,15 @@ public class Input {
                     while (line != null) {
 
                         line = reader.readLine();
+                        if (line == null) {
+                            return fullList;
+                        }
                         fullList.add(line);
+
 //
 
                     }
+
 //
                     reader.close();
                 } else if (currentList != null) {
@@ -65,6 +70,7 @@ public class Input {
 
             }
         } catch (NullPointerException e) {
+            return fullList;
 
         } catch (Exception e) {
 

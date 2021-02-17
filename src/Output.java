@@ -58,7 +58,7 @@ public class Output {
 //--------------------------------------------------------------
     public void generateFile() throws FileNotFoundException {
         circle = new CircularShifter();
-        PropertyLoader props = new PropertyLoader();
+        IODecorator props = new IODecorator();
         ArrayList<String> list = circle.getList();
 //Write txt file
         if (props.lineCountSetting.equals("Before")) {
@@ -69,7 +69,7 @@ public class Output {
 
         BufferedWriter writer = null;
         try {
-            writer = new BufferedWriter(new FileWriter("KWIC_Result_File__HW2_Montreaux_Rodgers.txt"));
+            writer = new BufferedWriter(new FileWriter("KWIC_Result_File__HW3_Montreaux_Rodgers.txt"));
             writer.write(props.headerLine);
             for (int i = 0; i < list.size(); i++)
                 writer.write(list.get(i) + System.getProperty("line.separator"));

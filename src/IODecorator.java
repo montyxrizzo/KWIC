@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-public class PropertyLoader {
+public class IODecorator {
 
 
     String result = "";
@@ -52,7 +52,7 @@ public class PropertyLoader {
 
 
                 transList = inputChoice.readFile();
-//                System.out.println(transList);
+                System.out.println(transList);
 
             } else if (input.equals("kwic.ConsoleInput")) {
                 transList = inputChoice.readConsoleInput();
