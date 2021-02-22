@@ -10,7 +10,11 @@ import java.util.Scanner;
 
 
 public class Input {
-    private ArrayList fullList = new ArrayList<String>();
+
+//    interface
+
+
+    private ArrayList inputList = new ArrayList<String>();
 
     public ArrayList<String> readFile() throws Exception {
 
@@ -37,15 +41,15 @@ public class Input {
                     String line = reader.readLine();
                     lineStorage.getRecordFromLine(line);
 
-                    fullList.add(line);
+                    inputList.add(line);
 
                     while (line != null) {
 
                         line = reader.readLine();
                         if (line == null) {
-                            return fullList;
+                            return inputList;
                         }
-                        fullList.add(line);
+                        inputList.add(line);
 
 //
 
@@ -62,8 +66,8 @@ public class Input {
                             filePath));
 
                     String line = reader.readLine();
-                    fullList.clear();
-                    fullList.add(line);
+                    inputList.clear();
+                    inputList.add(line);
 
 
                 }
@@ -72,13 +76,13 @@ public class Input {
 
             }
         } catch (NullPointerException e) {
-            return fullList;
+            return inputList;
 
         } catch (Exception e) {
 
         }
 
-        return fullList;
+        return inputList;
 
 
     }
@@ -97,7 +101,7 @@ public class Input {
 
                     lineStorage.getRecordFromLine(line);
                     List lineArray = lineStorage.getRecordFromLine(line);
-                    fullList.add(line);
+                    inputList.add(line);
 
                     StringBuffer sb = new StringBuffer();
 
@@ -106,7 +110,7 @@ public class Input {
                         sb.append(" ");
                     }
                     if (line.equals("")) {
-                        return fullList;
+                        return inputList;
                     }
 //
 //
@@ -123,7 +127,7 @@ public class Input {
 
         }
 
-        return fullList;
+        return inputList;
 
     }
 

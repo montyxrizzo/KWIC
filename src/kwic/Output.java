@@ -66,7 +66,7 @@ public class Output {
         if (props.lineCountSetting.equals("Before")) {
             props.headerLine += "Line count: " + props.lineCounter + "\n" + "\n";
         } else if (props.lineCountSetting.equals("After")) {
-            props.footerLine += "\nLine count: " + props.lineCounter;
+//            props.footerLine += "\nLine count: " + props.lineCounter;
         }
 
         BufferedWriter writer = null;
@@ -80,7 +80,7 @@ public class Output {
         } finally {
             try {
                 if (writer != null)
-                    writer.write(props.footerLine);
+//                    writer.write(props.footerLine);
                 writer.close();
             } catch (IOException e) {
             }

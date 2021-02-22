@@ -1,12 +1,12 @@
 package kwic;
 
 public class Footer {
-    private static String footerLine = "";
+    private static String footerLine = "~ KWIC footer ~ ";
     ConfigLoader config = new ConfigLoader();
     public String addFooter(boolean footFlag) {
-          properties = config.loadProperties();
 
 
-        return footer
+
+        return  footerLine;
     }
 }
