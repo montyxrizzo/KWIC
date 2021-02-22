@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package kwic;
+
 import java.util.*;
 
 public class CircularShifter {

@@ -1,4 +1,4 @@
-~ KWIC Output Header  ~ 
+~ KWIC kwic.Output kwic.Header  ~
 
 gooder than god, What is 
 than god, What is gooder 

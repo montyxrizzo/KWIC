@@ -1,11 +1,11 @@
+package kwic;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-public class IODecorator {
+public class ConfigLoader {
 
 
     String result = "";
@@ -13,10 +13,9 @@ public class IODecorator {
     public static String lineCounter = "";
     private List transList = new ArrayList<String>();
     public static String headerLine = "";
-    public static String footerLine = "";
     public static String lineCountSetting = "";
 
-    public String getPropValues() throws IOException {
+    public String loadProperties() throws IOException {
 
         try {
 
@@ -38,7 +37,9 @@ public class IODecorator {
             String input = prop.getProperty("input");
             String sort = prop.getProperty("sort");
             String circShift = prop.getProperty("circShift");
-            String formatFooter = prop.getProperty("formatHeaderFooter");
+            String formatFooter = prop.getProperty("formatFooter");
+            String formatHeader = prop.getProperty("formatHeader");
+
             String output = prop.getProperty("output");
             String lineCount = prop.getProperty("lineCount");
             this.lineCountSetting = lineCount;
@@ -47,12 +48,12 @@ public class IODecorator {
 //            ~~~~   Strategy Pattern ~~
             Input inputChoice = new Input();
 //                System.out.println(input);
-//            Input
+//            kwic.Input
             if (input.equals("kwic.FileInput")) {
 
 
                 transList = inputChoice.readFile();
-                System.out.println(transList);
+//                System.out.println(transList);
 
             } else if (input.equals("kwic.ConsoleInput")) {
                 transList = inputChoice.readConsoleInput();
@@ -85,7 +86,7 @@ public class IODecorator {
             }
 
 
-//             ~~~~~   Output ~~~~~~
+//             ~~~~~   kwic.Output ~~~~~~
             int counter = 0;
             for (int i = 0; i < transList.size(); i++)
                 if (transList.get(i) != null)
@@ -102,7 +103,7 @@ public class IODecorator {
             if (output.equals("kwic.FileOutput")) {
 
                 if (formatFooter.equals("True")) {
-                    String header = "~ KWIC Output Header  ~ ";
+                    String header = "~ KWIC kwic.Output kwic.Header  ~ ";
                     String footer = " ~ KWIC footer ~ ";
 
                     System.getProperty("line.separator");

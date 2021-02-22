@@ -1,4 +1,4 @@
-~ KWIC Output Header  ~ 
+~ KWIC kwic.Output kwic.Header  ~
 
 Line count: There are 20 lines in your output.
 

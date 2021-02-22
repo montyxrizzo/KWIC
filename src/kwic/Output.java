@@ -1,3 +1,5 @@
+package kwic;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -58,7 +60,7 @@ public class Output {
 //--------------------------------------------------------------
     public void generateFile() throws FileNotFoundException {
         circle = new CircularShifter();
-        IODecorator props = new IODecorator();
+        ConfigLoader props = new ConfigLoader();
         ArrayList<String> list = circle.getList();
 //Write txt file
         if (props.lineCountSetting.equals("Before")) {

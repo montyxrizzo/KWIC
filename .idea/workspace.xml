@@ -2,18 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="423abe04-a618-4b82-a5a3-12da5c22be6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Footer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/MasterControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/MasterControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/Output.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/Output.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/PropertyLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/IODecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/IODecorator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IODecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IODecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MasterControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MasterControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PropertyLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IODecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +33,16 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="KWIC" />
@@ -77,6 +94,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="GroovyConsoleState">
     <option name="list">
       <list>
@@ -113,6 +138,7 @@
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
+  <component name="ProjectId" id="1ofjlNtBrUdbqapymTFtxUek5WF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -153,7 +179,13 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -166,25 +198,21 @@
   </component>
   <component name="RunManager" selected="Application.MasterControl">
     <configuration name="Input" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Input" />
+      <option name="MAIN_CLASS_NAME" value="kwic.Input" />
       <module name="KWIC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MasterControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MasterControl" />
+    <configuration name="MasterControl" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kwic.MasterControl" />
       <module name="KWIC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MasterControl" />
-      </list>
-    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -314,43 +342,43 @@
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>80</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>81</line>
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>83</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>84</line>
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>88</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>89</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>89</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>90</line>
           <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>90</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>91</line>
           <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>76</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>77</line>
           <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>78</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>79</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/IODecorator.java</url>
-          <line>67</line>
+          <url>file://$PROJECT_DIR$/src/ConfigLoader.java</url>
+          <line>68</line>
           <option name="timeStamp" value="120" />
         </line-breakpoint>
       </breakpoints>
