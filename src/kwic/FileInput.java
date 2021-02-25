@@ -6,27 +6,31 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class  FileInput implements Input {
-    private ArrayList<String> fileStrings =  new ArrayList<String>();
+public class  FileInput extends Input {
+    public ArrayList<String> fileStrings =  new ArrayList<String>();
+    ArrayList<String> currentList = new ArrayList<String>();
+    private LineStorage lineStorage = new LineStorage();
 
-    public ArrayList<String> readFile() throws Exception {
+    public ArrayList<String> readFile(String path) throws Exception {
 
         CircularShifter circle = new CircularShifter();
 
         Scanner in = new Scanner(System.in);
-        LineStorage lineStorage = new LineStorage();
-        ArrayList<String> currentList = new ArrayList<String>();
 
         BufferedReader reader;
+        ArrayList<String> currentList;
         try {
+
+            String filePath;
+
             try {
-                currentList = circle.getList();
-                if (currentList.isEmpty()) {
-
-                    System.out.println("Please enter the absolute filepath to a .txt file containing the data you would like to shift.");
 
 
-                    String filePath = in.nextLine();
+                if (this.currentList.isEmpty()) {
+//                    System.out.println("Please enter the absolute filepath to a .txt file containing the data you would like to shift.");
+
+
+                     filePath = path;
 
                     reader = new BufferedReader(new FileReader(
                             filePath));
@@ -50,10 +54,10 @@ public class  FileInput implements Input {
 
 //
                     reader.close();
-                } else if (currentList != null) {
+                } else if (this.currentList != null) {
                     System.out.println("Please enter the absolute filepath to a .txt file containing the STOPWORDS you would like to ommit.");
 
-                    String filePath = in.nextLine();
+                     filePath = path;
 
                     reader = new BufferedReader(new FileReader(
                             filePath));
@@ -61,6 +65,7 @@ public class  FileInput implements Input {
                     String line = reader.readLine();
                     fileStrings.clear();
                     fileStrings.add(line);
+                    lineStorage.addLine(line);
 
 
                 }

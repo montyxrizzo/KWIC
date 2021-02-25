@@ -6,16 +6,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MasterControl {
-    LineStorage storage = new LineStorage();
-    private List stringList = new ArrayList<String>();
-    public static void main(String[] args) throws IOException {
+    private static ArrayList<String> stringList;
+
+    public static void main(String[] args) throws Exception {
+        LineStorage storage = new LineStorage();
+
 //Load Properties
         ConfigLoader properties = new ConfigLoader();
         properties.loadProperties();
         String input_type = properties.getSetting("input");
-        if (input_type == "kwic.FileInput") {
-            stringList =
+        Input input;
+       ArrayList<String> stringList;
+        switch (input_type){
+            case "kwic.ConsoleInput":
+                input = new ConsoleInput();
+                stringList = (ArrayList<String>) ((ConsoleInput) input).readConsoleInput();
+                break;
+
+            default:
+                input = new FileInput();
+                String file = properties.getSetting("path");
+                stringList = ((FileInput) input).readFile(file);
+                break;
         }
+        CircularShifter circle = new CircularShifter();
+        ArrayList<String> shiftedList =  circle.shiftAtLine(stringList);
+
+        System.out.println(shiftedList);
+
+
+
+
 
 
 

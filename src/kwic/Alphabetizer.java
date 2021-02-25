@@ -5,7 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Collections;
 
-public class Alphabetizer {
+public class Alphabetizer extends LineStorage {
+    private static List<String> stopwords;
+    LineStorage linestore;
+    ArrayList<String> currentList;
+
+
     public static String sortList(List<String> list) {
         String[] myArray = new String[list.size()];
         myArray = list.toArray(myArray);
@@ -35,5 +40,41 @@ public class Alphabetizer {
 
 
         return newString;
+    }
+    private  ArrayList<String> removeStopWords(List<String> list) {
+        FileInput stopwordInput = new FileInput();
+
+        try {
+            ConfigLoader properties = new ConfigLoader();
+            properties.loadProperties();
+            String stopPath = properties.getSetting("stopPath");
+            stopwords = stopwordInput.readFile(stopPath);
+            stopwords = linestore.getWords(stopwords.get(0));
+            System.out.println("Stop Words: " + stopwords + "\n");
+            // Array of prefixes
+
+
+            List<String> arr = stopwords;
+            for (int j = 0; j < list.size(); j++) {
+                // Given string
+                String str = list.get(j);
+                // Check for each prefix element
+                for (int i = 0; i < stopwords.size(); i++) {
+                    if (str.startsWith(arr.get(i))) {
+                        currentList =  linestore.getList();
+                        currentList.remove(j);
+
+                        break;
+                    }
+                }
+            }
+//            linestore.setList(currentList);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return currentList;
+
     }
 }

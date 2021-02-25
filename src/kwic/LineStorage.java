@@ -9,21 +9,33 @@ import java.util.*;
 public class LineStorage {
 
     private   List<List<String>> listTrans;
+    private static ArrayList<String>  fullList ;
+    private  ArrayList<String>  shiftedLines ;
+    private static ArrayList<String>  shiftedlist;
 
 
 
 
-    public  List<String> getWords(String line){
+
+    public  ArrayList<String> getWords(String line){
         int count = line.length();
-        List<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>();
         String [] words = line.split(" ", count );
 
         for (String word : words) {
             list.add(word);
 
+
         }
         return list;
     }
+    public ArrayList<String> getList() {
+        return fullList;
+    }
+    public void setList(ArrayList<String> list ) {
+        fullList = list;
+    }
+
 
 
 
@@ -42,4 +54,10 @@ public class LineStorage {
         return values;
     }
 
+    public void addLine(String line) {
+        fullList.add(line);
+    }
+    public  void addShiftedLine(String line) {
+        shiftedLines.add(line);
+    }
 }

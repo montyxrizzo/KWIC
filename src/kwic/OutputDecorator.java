@@ -1,6 +1,6 @@
 package kwic;
 
-public class outputDecorator {
+public class OutputDecorator {
     Output output = new Output();
 
 

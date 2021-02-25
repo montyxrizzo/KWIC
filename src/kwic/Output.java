@@ -59,9 +59,9 @@ public class Output {
 //    }
 //--------------------------------------------------------------
     public void generateFile() throws FileNotFoundException {
-        circle = new CircularShifter();
+        LineStorage lineStore = new LineStorage();
         ConfigLoader props = new ConfigLoader();
-        ArrayList<String> list = circle.getList();
+        ArrayList<String> list = lineStore.getList();
 //Write txt file
         if (props.lineCountSetting.equals("Before")) {
             props.headerLine += "Line count: " + props.lineCounter + "\n" + "\n";
@@ -90,15 +90,7 @@ public class Output {
 
     }
 
-    public void writeToConsole() {
 
-        circle = new CircularShifter();
-        ArrayList<String> list = circle.getList();
-        for (int i = 0; i < list.size(); i++)
-            System.out.println(list.get(i));
-
-
-    }
 
 
 }
