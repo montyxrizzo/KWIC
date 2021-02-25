@@ -55,7 +55,6 @@ public class  FileInput extends Input {
 //
                     reader.close();
                 } else if (this.currentList != null) {
-                    System.out.println("Please enter the absolute filepath to a .txt file containing the STOPWORDS you would like to ommit.");
 
                      filePath = path;
 

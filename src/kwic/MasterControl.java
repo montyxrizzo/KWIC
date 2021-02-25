@@ -7,16 +7,19 @@ import java.util.List;
 
 public class MasterControl {
     private static ArrayList<String> stringList;
-
+    ArrayList<String> shiftedList;
     public static void main(String[] args) throws Exception {
         LineStorage storage = new LineStorage();
-
+        Alphabetizer alphabetizer = new Alphabetizer();
 //Load Properties
         ConfigLoader properties = new ConfigLoader();
         properties.loadProperties();
         String input_type = properties.getSetting("input");
+        String stopWords  = properties.getSetting("circShift");
+
         Input input;
        ArrayList<String> stringList;
+        ArrayList<String> shiftedList;
         switch (input_type){
             case "kwic.ConsoleInput":
                 input = new ConsoleInput();
@@ -30,9 +33,20 @@ public class MasterControl {
                 break;
         }
         CircularShifter circle = new CircularShifter();
-        ArrayList<String> shiftedList =  circle.shiftAtLine(stringList);
+         shiftedList =  circle.shiftAtLine(stringList);
 
-        System.out.println(shiftedList);
+
+        switch (stopWords){
+            case "kwic.StopWordShift":
+                shiftedList = alphabetizer.removeStopWords(shiftedList);
+                break;
+            default:
+                break;
+        }
+        for (String line: shiftedList) {
+            System.out.println(line);
+        }
+
 
 
 

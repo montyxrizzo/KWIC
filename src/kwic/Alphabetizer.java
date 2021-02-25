@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Collections;
 
 public class Alphabetizer extends LineStorage {
-    private static List<String> stopwords;
+    private static ArrayList<String> stopwords;
     LineStorage linestore;
-    ArrayList<String> currentList;
+  private  static  ArrayList<String> currentList = new ArrayList<String>();
 
 
     public static String sortList(List<String> list) {
@@ -41,7 +41,7 @@ public class Alphabetizer extends LineStorage {
 
         return newString;
     }
-    private  ArrayList<String> removeStopWords(List<String> list) {
+    public  static  ArrayList<String> removeStopWords(ArrayList<String> list) {
         FileInput stopwordInput = new FileInput();
 
         try {
@@ -49,21 +49,31 @@ public class Alphabetizer extends LineStorage {
             properties.loadProperties();
             String stopPath = properties.getSetting("stopPath");
             stopwords = stopwordInput.readFile(stopPath);
-            stopwords = linestore.getWords(stopwords.get(0));
-            System.out.println("Stop Words: " + stopwords + "\n");
+            String stop =  stopwords.get(0);
+            stop.replace("]","");
+            stop.replace("[","");
+            stop.replace(" ","");
+            String stopStr[] = stop.split(",");
+            List<String> al = new ArrayList<String>();
+            stopwords = (ArrayList<String>) al;
+            al = Arrays.asList(stopStr);
+            for(String s: al){
+                System.out.println(s);
+            }
+            System.out.println("Stop Words: " + al + "\n");
             // Array of prefixes
 
 
-            List<String> arr = stopwords;
+            List<String> arr = al;
             for (int j = 0; j < list.size(); j++) {
                 // Given string
                 String str = list.get(j);
                 // Check for each prefix element
-                for (int i = 0; i < stopwords.size(); i++) {
+                for (int i = 0; i < al.size(); i++) {
                     if (str.startsWith(arr.get(i))) {
-                        currentList =  linestore.getList();
-                        currentList.remove(j);
-
+//                        currentList =  linestore.getList();
+                        list.remove(j);
+                        j--;
                         break;
                     }
                 }
@@ -74,7 +84,7 @@ public class Alphabetizer extends LineStorage {
             e.printStackTrace();
         }
 
-        return currentList;
+        return list;
 
     }
 }

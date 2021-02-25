@@ -2,31 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="423abe04-a618-4b82-a5a3-12da5c22be6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/kwic/ConsoleOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kwic/FileOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kwic/LineCounterBottom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kwic/LineCounterTop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Alphabetizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Alphabetizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/CircularShifter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/CircularShifter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/ConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/ConfigLoader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/FileInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/FileInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/LineStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/LineStorage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/MasterControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/MasterControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Output.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Output.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/outputDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/outputDecorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/stopWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/stopWords.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kwic/Alphabetizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Alphabetizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kwic/CircularShifter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/CircularShifter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kwic/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/ConfigLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kwic/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/FileInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kwic/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kwic/LineStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/LineStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kwic/MasterControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/MasterControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kwic/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kwic/outputDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/OutputDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stopWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/stopWords.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,22 +332,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/FileInput.java</url>
-          <line>82</line>
+          <line>81</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/FileInput.java</url>
-          <line>76</line>
+          <line>75</line>
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/FileInput.java</url>
-          <line>72</line>
+          <line>71</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
-          <line>32</line>
+          <line>35</line>
           <option name="timeStamp" value="134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -378,18 +362,58 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/CircularShifter.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/kwic/CircularShifter.java</url>
           <line>33</line>
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
           <line>34</line>
-          <option name="timeStamp" value="159" />
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/kwic/Footer.java</url>
@@ -397,6 +421,10 @@
           <properties field="footerLine" class="kwic.Footer" />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="188" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -407,7 +435,7 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/KWIC$MasterControl.ic" NAME="MasterControl Coverage Results" MODIFIED="1612115494057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/KWIC$MasterControl.ic" NAME="MasterControl Coverage Results" MODIFIED="1614294809717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/and if you eat it you will die devil more evil tha.txt" />
