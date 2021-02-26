@@ -13,8 +13,8 @@ public class LineStorage {
     private  ArrayList<String>  shiftedLines ;
     private static ArrayList<String>  shiftedlist;
 
-
-
+    public LineStorage() {
+    }
 
 
     public  ArrayList<String> getWords(String line){
@@ -33,7 +33,12 @@ public class LineStorage {
         return fullList;
     }
     public void setList(ArrayList<String> list ) {
+
         fullList = list;
+    }
+    public void clearList(ArrayList<String> list ) {
+
+         fullList.clear();
     }
 
 

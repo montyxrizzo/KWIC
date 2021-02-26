@@ -11,7 +11,7 @@ public class Alphabetizer extends LineStorage {
   private  static  ArrayList<String> currentList = new ArrayList<String>();
 
 
-    public static String sortList(List<String> list) {
+    public static ArrayList<String> sortList(List<String> list) {
         String[] myArray = new String[list.size()];
         myArray = list.toArray(myArray);
         int size = myArray.length;
@@ -28,18 +28,22 @@ public class Alphabetizer extends LineStorage {
         List<String> tmpList = new ArrayList<String>(Arrays.asList(myArray));
         myArray = tmpList.toArray(new String[0]);
         Arrays.sort(myArray);
-        String newString = Arrays.toString(myArray);
-        return newString;
+        ArrayList<String> stringList = new ArrayList<String>(Arrays.asList(myArray)); //new ArrayList is only needed if you absolutely need an ArrayList
+
+//        String newString = Arrays.toString(myArray);
+        return stringList;
 
     }
 
-    public static String caseInsensitiveSort(List<String> list) {
+    public static ArrayList<String> caseInsensitiveSort(ArrayList<String> list) {
         String[] myArray = new String[list.size()];
         Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
-        String newString = Arrays.toString(myArray);
+//        list.
 
 
-        return newString;
+
+
+        return list;
     }
     public  static  ArrayList<String> removeStopWords(ArrayList<String> list) {
         FileInput stopwordInput = new FileInput();

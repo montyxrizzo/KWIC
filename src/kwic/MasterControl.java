@@ -16,6 +16,7 @@ public class MasterControl {
         properties.loadProperties();
         String input_type = properties.getSetting("input");
         String stopWords  = properties.getSetting("circShift");
+        String sort = properties.getSetting("sort");
 
         Input input;
        ArrayList<String> stringList;
@@ -43,9 +44,19 @@ public class MasterControl {
             default:
                 break;
         }
-        for (String line: shiftedList) {
-            System.out.println(line);
+        ArrayList<String> sortedList;
+        switch (sort){
+            case "kwic.CaseSensitive":
+                sortedList = alphabetizer.sortList(shiftedList);
+
+            default:
+                sortedList = alphabetizer.caseInsensitiveSort(shiftedList);
         }
+System.out.println(sortedList);
+
+//        for (String line: sortedList) {
+//            System.out.println(line);
+//        }
 
 
 
