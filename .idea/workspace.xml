@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="423abe04-a618-4b82-a5a3-12da5c22be6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/kwic/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Alphabetizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Alphabetizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/ConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/ConfigLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/ConsoleOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/ConsoleOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/FileOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/FileOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Footer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Footer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Header.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/LineCounterBottom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/LineCounterBottom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/LineCounterTop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/LineCounterTop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/LineStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/LineStorage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/MasterControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/MasterControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/Output.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/Output.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KWIC/kwic/outputDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KWIC/kwic/outputDecorator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kwic/Alphabetizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Alphabetizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/ConsoleOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/ConsoleOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/FileOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/FileOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/Footer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Footer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/LineCounterBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/LineCounterBottom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/LineCounterTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/LineCounterTop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kwic/LineStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/LineStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kwic/MasterControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/MasterControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kwic/OutputDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kwic/OutputDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,11 +368,6 @@
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/FileInput.java</url>
           <line>26</line>
           <option name="timeStamp" value="135" />
@@ -364,16 +383,6 @@
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/Alphabetizer.java</url>
           <line>39</line>
           <option name="timeStamp" value="168" />
@@ -385,12 +394,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="194" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
-          <line>47</line>
+          <line>52</line>
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -398,16 +402,143 @@
           <line>77</line>
           <option name="timeStamp" value="196" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/kwic/Footer.java</url>
-          <line>3</line>
-          <properties field="footerLine" class="kwic.Footer" />
-          <option name="timeStamp" value="123" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/MasterControl.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/LineCounterTop.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/LineCounterTop.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/Line.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/kwic/LineStorage.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="222" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="188" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/kwic/LineStorage.java</url>
+          <line>83</line>
+          <properties class="kwic.LineStorage" method="addCountBefore">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

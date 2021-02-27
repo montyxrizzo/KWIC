@@ -47,7 +47,7 @@ public class ConfigLoader {
 
             Input inputChoice = new Input();
 
-            System.out.println("Config Options: " + result);
+//            System.out.println("Config Options: " + result);
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         } finally {

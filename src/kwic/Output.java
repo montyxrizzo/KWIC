@@ -4,9 +4,18 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class Output {
-    private CircularShifter circle;
-//------------------ Deprecated ---------------------------
+public class Output  {
+
+
+
+    LineStorage storage = new LineStorage();
+    Line lines = new Line();
+
+
+
+
+
+//----------------- Deprecated ---------------------------
 
     //    public void promptUserOutput() {
 //
@@ -14,7 +23,7 @@ public class Output {
 //
 //        System.out.println("Where would you like the output? Press (1) for file, press (2) for console ");
 //
-//        int userInputChoice = -1;
+//        int userInputChoice = -1; `
 //
 //        try {
 //            userInputChoice = in.nextInt();
@@ -58,37 +67,39 @@ public class Output {
 //        }
 //    }
 //--------------------------------------------------------------
-    public void generateFile() throws FileNotFoundException {
-        LineStorage lineStore = new LineStorage();
-        ConfigLoader props = new ConfigLoader();
-        ArrayList<String> list = lineStore.getList();
-//Write txt file
-        if (props.lineCountSetting.equals("Before")) {
-            props.headerLine += "Line count: " + props.lineCounter + "\n" + "\n";
-        } else if (props.lineCountSetting.equals("After")) {
-//            props.footerLine += "\nLine count: " + props.lineCounter;
-        }
-
-        BufferedWriter writer = null;
-        try {
-            writer = new BufferedWriter(new FileWriter("KWIC_Result_File__HW3_Montreaux_Rodgers.txt"));
-            writer.write(props.headerLine);
-            for (int i = 0; i < list.size(); i++)
-                writer.write(list.get(i) + System.getProperty("line.separator"));
-
-        } catch (IOException e) {
-        } finally {
-            try {
-                if (writer != null)
-//                    writer.write(props.footerLine);
-                writer.close();
-            } catch (IOException e) {
-            }
-        }
-        System.out.println("Your file has been written to  the SRC directory of this project.");
-
-
-    }
+//
+//
+//    public void generateFile() throws FileNotFoundException {
+//        LineStorage lineStore = new LineStorage();
+//        ConfigLoader props = new ConfigLoader();
+//        ArrayList<String> list = lineStore.getList();
+////Write txt file
+//        if (props.lineCountSetting.equals("Before")) {
+//            props.headerLine += "Line count: " + props.lineCounter + "\n" + "\n";
+//        } else if (props.lineCountSetting.equals("After")) {
+////            props.footerLine += "\nLine count: " + props.lineCounter;
+//        }
+//
+//        BufferedWriter writer = null;
+//        try {
+//            writer = new BufferedWriter(new FileWriter("KWIC_Result_File__HW3_Montreaux_Rodgers.txt"));
+//            writer.write(props.headerLine);
+//            for (int i = 0; i < list.size(); i++)
+//                writer.write(list.get(i) + System.getProperty("line.separator"));
+//
+//        } catch (IOException e) {
+//        } finally {
+//            try {
+//                if (writer != null)
+////                    writer.write(props.footerLine);
+//                writer.close();
+//            } catch (IOException e) {
+//            }
+//        }
+//        System.out.println("Your file has been written to  the SRC directory of this project.");
+//
+//
+//    }
 
 
 

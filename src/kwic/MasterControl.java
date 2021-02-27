@@ -17,9 +17,13 @@ public class MasterControl {
         String input_type = properties.getSetting("input");
         String stopWords  = properties.getSetting("circShift");
         String sort = properties.getSetting("sort");
+        String lineCount = properties.getSetting("lineCount");
+        String formatHeader = properties.getSetting("formatHeader");
+        String formatFooter = properties.getSetting("formatFooter");
+        String outputSetting = properties.getSetting("output");
 
         Input input;
-       ArrayList<String> stringList;
+        ArrayList<String> stringList;
         ArrayList<String> shiftedList;
         switch (input_type){
             case "kwic.ConsoleInput":
@@ -34,7 +38,7 @@ public class MasterControl {
                 break;
         }
         CircularShifter circle = new CircularShifter();
-         shiftedList =  circle.shiftAtLine(stringList);
+        shiftedList =  circle.shiftAtLine(stringList);
 
 
         switch (stopWords){
@@ -45,14 +49,65 @@ public class MasterControl {
                 break;
         }
         ArrayList<String> sortedList;
+//        System.out.println(sort);
         switch (sort){
             case "kwic.CaseSensitive":
                 sortedList = alphabetizer.sortList(shiftedList);
+                break;
 
             default:
                 sortedList = alphabetizer.caseInsensitiveSort(shiftedList);
         }
-System.out.println(sortedList);
+        storage.setList(sortedList);
+        OutputDecorator decorator;
+        switch (lineCount) {
+            case "Before":
+
+                decorator = new LineCounterTop();
+                ((LineCounterTop) decorator).addCount(sortedList);
+                break;
+            default:
+                decorator = new LineCounterBottom();
+                ((LineCounterBottom) decorator).addCount(sortedList);
+                break;
+        }
+        switch (formatHeader){
+            case "True" :
+                decorator = new Header();
+                ((Header) decorator).addHeader(sortedList);
+                break;
+            default:
+                break;
+
+        }
+        switch (formatFooter){
+            case "True" :
+                decorator = new Footer();
+                ((Footer) decorator).addFooter(sortedList);
+                break;
+            default:
+                break;
+
+        }
+
+        Output output;
+
+        switch ( outputSetting){
+            case "kwic.FileOutput":
+                output = new FileOutput();
+                ((FileOutput) output).generateFile(sortedList);
+                break;
+            default:
+                output = new ConsoleOutput();
+                ((ConsoleOutput) output).writeToConsole(sortedList);
+                break;
+
+        }
+
+
+        System.out.println("Program Complete");
+
+
 
 //        for (String line: sortedList) {
 //            System.out.println(line);

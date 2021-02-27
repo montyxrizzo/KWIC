@@ -62,7 +62,7 @@ public class Alphabetizer extends LineStorage {
             stopwords = (ArrayList<String>) al;
             al = Arrays.asList(stopStr);
             for(String s: al){
-                System.out.println(s);
+//                System.out.println(s);
             }
             System.out.println("Stop Words: " + al + "\n");
             // Array of prefixes

@@ -6,20 +6,27 @@ import java.util.Scanner;
 import java.util.*;
 
 
-public class LineStorage {
+public class LineStorage extends Line{
 
-    private   List<List<String>> listTrans;
-    private static ArrayList<String>  fullList ;
-    private  ArrayList<String>  shiftedLines ;
-    private static ArrayList<String>  shiftedlist;
+    public  ArrayList<String>  fullList ;
+    public  int lineCount;
+
+    public LineStorage(ArrayList<String> lines) {
+        super(lines);
+    }
 
     public LineStorage() {
+
     }
+
+//    public LineStorage() {
+//        super();
+//    }
 
 
     public  ArrayList<String> getWords(String line){
         int count = line.length();
-        ArrayList<String> list = new ArrayList<String>();
+       ArrayList<String> list = new ArrayList<String>();
         String [] words = line.split(" ", count );
 
         for (String word : words) {
@@ -35,10 +42,22 @@ public class LineStorage {
     public void setList(ArrayList<String> list ) {
 
         fullList = list;
+        countLines(fullList.size());
+
+
     }
     public void clearList(ArrayList<String> list ) {
 
          fullList.clear();
+    }
+    public int getLineCount(){
+
+            return lineCount;
+    }
+    private void countLines (int count){
+        this.lineCount = count;
+        Line lines = new Line(fullList);
+        lines.setLineCount(count);
     }
 
 
@@ -62,7 +81,14 @@ public class LineStorage {
     public void addLine(String line) {
         fullList.add(line);
     }
-    public  void addShiftedLine(String line) {
-        shiftedLines.add(line);
+    public void addCountBefore(String count, ArrayList<String> list) {
+        this.fullList = list;
+        fullList.add(0,count);
     }
+    public void addCountAfter(String count,ArrayList<String> list)  {
+        this.fullList = list;
+        fullList.add(0,count);
+    }
+
+
 }
